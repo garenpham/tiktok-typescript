@@ -1,27 +1,25 @@
-# Next.js + Tailwind CSS Example
+# Welcome to Tiktok Clone with Nextjs, Typescript, and login functionality with latest Google Indentity Services
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+"Discontinuing Google Sign-In JavaScript Platform Library for web"
+https://developers.googleblog.com/2021/08/gsi-jsweb-deprecation.html
 
-## Deploy your own
+Here is my library integrations:
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+https://nextjs.org/docs/getting-started
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+    npx create-next-app@latest -e with-tailwindcss tiktok-typescript --ts
 ```
+
+https://github.com/MomenSherif/react-oauth
 
 ```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+    npm install @react-oauth/google@latest jwt-decode
 ```
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+https://zustand-demo.pmnd.rs/ Implemented in /store/authStore.ts
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Typescript variable type detect syntax:
+https://github.com/orta/vscode-twoslash-queries (// ^?)
+
+Awesome font style for vscode: https://github.com/microsoft/cascadia-code
