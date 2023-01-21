@@ -8,13 +8,13 @@ Here is my library integrations:
 https://nextjs.org/docs/getting-started
 
 ```bash
-    npx create-next-app@latest -e with-tailwindcss tiktok-typescript --ts
+npx create-next-app@latest -e with-tailwindcss tiktok-typescript --ts
 ```
 
 https://github.com/MomenSherif/react-oauth
 
 ```bash
-    npm install @react-oauth/google@latest jwt-decode
+npm install @react-oauth/google@latest jwt-decode
 ```
 
 https://zustand-demo.pmnd.rs/ Implemented in /store/authStore.ts
