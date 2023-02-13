@@ -6,9 +6,11 @@ import Link from 'next/link';
 import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
 import { BsPlay, BsFillPlayFill, BsFillPauseFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
+import { BASE_URL } from '../utils';
 
 interface IProps {
 	post: Video;
+	isNotPostDetails?: boolean;
 }
 
 const style = {
@@ -25,9 +27,10 @@ const style = {
 	video: `lg:w-[600px] h-[300px] md:h-[400px] lg:h-[530px] w-[200px] rounded-2xl cursor-pointer bg-gray-100`,
 	icon: `text-black text-2xl lg:text-4xl`,
 	icon__container: `absolute bottom-6 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-10 lg:justify-between w-[100px] md:w-[50px] lg:p-3`,
+	caption: `mt-2 font-normal`,
 };
 
-const VideoCard: NextPage<IProps> = ({ post }) => {
+const VideoCard: NextPage<IProps> = ({ post, isNotPostDetails }) => {
 	const [isHover, setIsHover] = useState(false);
 	const [playing, setPlaying] = useState(false);
 	const [isVideoMuted, setIsVideoMuted] = useState(false);
@@ -75,11 +78,16 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
 									{post.postedBy.userName}{' '}
 									<GoVerified className={style.verified} />
 								</p>
-								<p className={style.subUserName}>
-									{post.postedBy.userName}
-								</p>
+								<p className={style.subUserName}>{post.postedBy.userName}</p>
 							</div>
 						</Link>
+						<div className={style.caption}>
+							{post.caption}
+							<br />
+							<Link href={`/?topic=${post.topic}`}>
+								<div className="text-blue-800">#{post.topic}</div>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>

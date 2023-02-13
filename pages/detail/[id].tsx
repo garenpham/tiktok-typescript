@@ -84,10 +84,10 @@ const Detail = ({ postDetails }: { postDetails: Video }) => {
 		e.preventDefault();
 		if (userProfile && comment) {
 			setIsPostingComment(true);
-			const { data } = await axios.put(
-				`${BASE_URL}/api/post/${post._id}`,
-				{ userId: userProfile._id, comment },
-			);
+			const { data } = await axios.put(`${BASE_URL}/api/post/${post._id}`, {
+				userId: userProfile._id,
+				comment,
+			});
 			setPost({ ...post, comments: data.comments });
 			setComment('');
 			setIsPostingComment(false);
@@ -119,9 +119,7 @@ const Detail = ({ postDetails }: { postDetails: Video }) => {
 					<div className={style.video__playBtn}>
 						{!playing && (
 							<button onClick={onVideoClick}>
-								<BsFillPlayFill
-									className={style.video__playIcon}
-								/>
+								<BsFillPlayFill className={style.video__playIcon} />
 							</button>
 						)}
 					</div>
@@ -163,9 +161,7 @@ const Detail = ({ postDetails }: { postDetails: Video }) => {
 								<div className={style.comment__profile}>
 									<p className={style.comment__userName}>
 										{post.postedBy.userName}{' '}
-										<GoVerified
-											className={style.comment__verified}
-										/>
+										<GoVerified className={style.comment__verified} />
 									</p>
 									<p className={style.comment__subUserName}>
 										{post.postedBy.userName}

@@ -14,12 +14,14 @@ const style = {
 };
 
 const Home = ({ videos }: IProps) => {
+	console.log(videos);
 	return (
 		<div className={style.wrapper}>
 			{videos.length ? (
 				videos.map((video: Video) => (
 					<VideoCard
 						post={video}
+						isNotPostDetails
 						key={video._id}
 					/>
 				))

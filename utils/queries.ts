@@ -22,8 +22,9 @@ export const allPostsQuery = () => {
       _id,
       userName,
       image
+      },
     },
-    }
+    topic
   }`;
 
 	return query;
@@ -52,8 +53,9 @@ export const postDetailQuery = (postId: string | string[]) => {
       postedBy->{
         _ref,
       _id,
+      },
     },
-    }
+    topic
   }`;
 	return query;
 };
@@ -83,7 +85,8 @@ likes,
       userName,
       image
     },
-    }
+    },
+  topic
   }`;
 	return query;
 };
@@ -126,7 +129,8 @@ export const userCreatedPostsQuery = (userId: string | string[]) => {
       userName,
       image
     },
-    }
+    },
+  topic
   }`;
 
 	return query;
@@ -158,7 +162,8 @@ export const userLikedPostsQuery = (userId: string | string[]) => {
       userName,
       image
     },
-    }
+    },
+  topic
   }`;
 
 	return query;
@@ -190,7 +195,8 @@ export const topicPostsQuery = (topic: string | string[]) => {
       userName,
       image
     },
-    }
+    },
+    topic
   }`;
 
 	return query;

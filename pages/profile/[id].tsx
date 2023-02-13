@@ -89,14 +89,13 @@ const Profile = ({ data }: IProps) => {
 						videosList.map((post: Video, idx: number) => (
 							<VideoCard
 								post={post}
+								isNotPostDetails
 								key={idx}
 							/>
 						))
 					) : (
 						<NoResults
-							text={`No ${
-								showUserVideos ? '' : 'Liked'
-							} Videos yet`}
+							text={`No ${showUserVideos ? '' : 'Liked'} Videos yet`}
 						/>
 					)}
 				</div>
