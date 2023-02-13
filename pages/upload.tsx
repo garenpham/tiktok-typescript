@@ -102,9 +102,7 @@ const Upload = () => {
 				<div>
 					<div>
 						<p className={style.title}>Upload Video</p>
-						<p className={style.subTitle}>
-							Post a video to your account
-						</p>
+						<p className={style.subTitle}>Post a video to your account</p>
 					</div>
 					<div className={style.upload__wrapper}>
 						{isLoading ? (
@@ -117,54 +115,25 @@ const Upload = () => {
 											src={videoAsset.url}
 											loop
 											controls
-											className={style.upload__video}
-										></video>
+											className={style.upload__video}></video>
 									</div>
 								) : (
 									<label className={style.upload}>
 										<div
-											className={[
-												style.upload__container,
-												'h-full',
-											].join(' ')}
-										>
-											<div
-												className={
-													style.upload__container
-												}
-											>
-												<p
-													className={
-														style.upload__btnContainer
-													}
-												>
-													<FaCloudUploadAlt
-														className={
-															style.upload__btn
-														}
-													/>
+											className={[style.upload__container, 'h-full'].join(' ')}>
+											<div className={style.upload__container}>
+												<p className={style.upload__btnContainer}>
+													<FaCloudUploadAlt className={style.upload__btn} />
 												</p>
-												<p
-													className={
-														style.upload__txt
-													}
-												>
-													Upload video
-												</p>
+												<p className={style.upload__txt}>Upload video</p>
 											</div>
-											<p
-												className={
-													style.upload__requirements
-												}
-											>
+											<p className={style.upload__requirements}>
 												MP4 or WebM or ogg <br />
 												720x1280 or higher <br />
 												Up to 10 minutes <br />
 												Less than 2GB
 											</p>
-											<p className={style.upload__select}>
-												Select File
-											</p>
+											<p className={style.upload__select}>Select File</p>
 										</div>
 										<input
 											type="file"
@@ -178,9 +147,7 @@ const Upload = () => {
 						)}
 
 						{wrongFileType && (
-							<p className={style.upload__error}>
-								Please select a video file
-							</p>
+							<p className={style.upload__error}>Please select a video file</p>
 						)}
 					</div>
 				</div>
@@ -192,19 +159,15 @@ const Upload = () => {
 						onChange={(e) => setCaption(e.target.value)}
 						className={style.form__input}
 					/>
-					<label className={style.form__label}>
-						Choose a category
-					</label>
+					<label className={style.form__label}>Choose a category</label>
 					<select
 						onChange={(e) => setCategory(e.target.value)}
-						className={style.topics__container}
-					>
+						className={style.topics__container}>
 						{topics.map((topic) => (
 							<option
 								key={topic.name}
 								className={style.topics}
-								value={topic.name}
-							>
+								value={topic.name}>
 								{topic.name}
 							</option>
 						))}
@@ -213,15 +176,13 @@ const Upload = () => {
 						<button
 							onClick={() => {}}
 							type="button"
-							className={style.confirmation__discard}
-						>
+							className={style.confirmation__discard}>
 							Discard
 						</button>
 						<button
 							onClick={handlePost}
 							type="button"
-							className={style.confirmation__post}
-						>
+							className={style.confirmation__post}>
 							Post
 						</button>
 					</div>
